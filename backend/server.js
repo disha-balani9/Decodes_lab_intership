@@ -92,6 +92,15 @@ app.get("/users", verifyToken, (req, res) => {
     res.json(result);
   });
 });
+app.get("/dashboard", verifyToken, (req, res) => {
+
+  res.json({
+    message: "Welcome to protected dashboard"
+  });
+
+});
+
+
 
 const db = mysql.createConnection({
   host: "localhost",
